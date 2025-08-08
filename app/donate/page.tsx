@@ -2,12 +2,12 @@ import { ImageDown } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { BottomAppBar } from "~/components/BottomAppBar";
 import { TopAppBar } from "~/components/TopAppBar";
-import Footer from "~/components/Footer";
 import { donorsData } from "./donorData";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import { MonetizationOn } from "@mui/icons-material";
 import Divider from "@mui/material/Divider";
+import Footer from "~/components/Footer";
 
 export default function Donate() {
   const handleSaveQRCode = async () => {

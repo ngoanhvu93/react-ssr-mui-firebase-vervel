@@ -6,14 +6,12 @@ import {
   Facebook,
   GitHub,
   Star,
-  Chat,
   Instagram,
 } from "@mui/icons-material";
 import { Card } from "@mui/material";
 
-export default function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <Card sx={{ p: 2, mt: 2, borderRadius: 1 }}>
       <div>
@@ -27,10 +25,8 @@ export default function Footer() {
               />
             </h3>
             <p className="mx-auto md:mx-0 leading-relaxed mb-4">
-              App Việt dành cho người Việt - Trải nghiệm công nghệ đặc sắc và
-              tiện ích cho cộng đồng
+              App Việt dành cho người Việt
             </p>
-
             {/* Features list */}
             <div className="mt-3">
               <div className="flex justify-center md:justify-start flex-wrap gap-2">
@@ -186,12 +182,11 @@ export default function Footer() {
               ký bản quyền.
             </p>
             <p className="text-white/70 text-sm flex items-center">
-              Thiết kế với{" "}
+              Nhà sáng lập
               <Favorite
                 sx={{ fontSize: 14 }}
                 className="mx-1 text-red-300 animate-pulse"
               />{" "}
-              bởi{" "}
               <span
                 onClick={() =>
                   typeof window !== "undefined" &&
@@ -207,4 +202,6 @@ export default function Footer() {
       </div>
     </Card>
   );
-}
+};
+
+export default Footer;
