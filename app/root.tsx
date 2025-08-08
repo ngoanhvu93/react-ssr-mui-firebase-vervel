@@ -32,31 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
         <ScrollRestoration
           getKey={(location) => {
-            const paths = [
-              "/",
-              "/search",
-              "/games",
-              "/app-store",
-              "/donate",
-              // "/join-lotto-room",
-              // "/join-thirteen-card-room",
-              // "/join-tournament",
-              // "/create-lotto-room",
-              // "/create-thirteen-card-room",
-              // "/create-tournament",
-              // "/lotto-room/:id",
-              // "/thirteen-card-room/:id",
-              // "/round-robin-tournament/:id",
-              // "/count-down",
-              // "/thirteen-card-game-history/:id",
-              // "/thirteen-card-game-detail/:id",
-              // "/lotto-game-history/:id",
-              // "/lotto-game-detail/:id",
-              // "/tournament-history/:id",
-              // "/tournament-detail/:id",
-              // "/flappy-bird",
-              // "/game-flappy-bird",
-            ];
+            const paths = ["/", "/search", "/games", "/app-store", "/donate"];
 
             return paths.includes(location.pathname)
               ? location.pathname

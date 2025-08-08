@@ -9,49 +9,15 @@ import {
   Chat,
   Instagram,
 } from "@mui/icons-material";
-import { useState, useEffect } from "react";
+import { Card } from "@mui/material";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Animation on scroll
-  useEffect(() => {
-    setIsVisible(true);
-
-    const handleScroll = () => {
-      const scrollPosition =
-        typeof window !== "undefined" && window.scrollY + window.innerHeight;
-      const footerPosition = document.getElementById("footer")?.offsetTop || 0;
-
-      if (scrollPosition && scrollPosition > footerPosition - 100) {
-        setIsVisible(true);
-      }
-    };
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, []);
 
   return (
-    <footer
-      id="footer"
-      className={`-mx-4 -my-4 relative overflow-hidden bg-gradient-to-br from-indigo-800 via-purple-800 to-pink-700 text-white py-8 sm:py-12 mt-auto shadow-xl transition-all duration-700 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
-    >
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-300 via-green-300 to-blue-300"></div>
-      <div className="absolute -top-16 -right-16 w-32 h-32 rounded-full bg-pink-400 opacity-20 blur-xl"></div>
-      <div className="absolute -bottom-12 -left-12 w-28 h-28 rounded-full bg-blue-400 opacity-20 blur-xl"></div>
-      <div className="absolute top-1/4 left-1/3 w-20 h-20 rounded-full bg-purple-300 opacity-10 blur-lg"></div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Main footer content */}
+    <Card sx={{ p: 2, mt: 2, borderRadius: 1 }}>
+      <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-          {/* App info */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold mb-3 flex flex-wrap justify-center md:justify-start items-center gap-2">
               <span className="text-yellow-300 tracking-wide">App Việt</span>
@@ -83,7 +49,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
           {/* Quick Links */}
           <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-4 text-yellow-200">
@@ -213,30 +178,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact us banner */}
-        <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-900/80 to-purple-900/80 p-6 backdrop-blur-sm mb-8">
-          <div className="absolute -top-8 -right-8 w-16 h-16 rounded-full bg-yellow-400 opacity-20 blur-xl"></div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
-              <h4 className="text-lg font-semibold mb-2 text-white">
-                Bạn cần hỗ trợ?
-              </h4>
-              <p className="text-white/80 text-sm max-w-md">
-                Đội ngũ App Việt luôn sẵn sàng lắng nghe và giúp đỡ bạn với mọi
-                vấn đề.
-              </p>
-            </div>
-            <Link
-              to="/contact"
-              className="inline-flex items-center  /10 hover: /20 border border-white/20 px-5 py-2.5 rounded-full text-white transition-colors"
-            >
-              <Chat sx={{ fontSize: 18 }} className="mr-2" />
-              <span>Liên hệ ngay</span>
-            </Link>
-          </div>
-        </div>
-
-        {/* Footer bottom */}
         <div className="border-t border-white/20 pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-white/70 text-sm mb-1 sm:mb-0 text-center sm:text-left">
@@ -264,6 +205,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </Card>
   );
 }
