@@ -83,7 +83,6 @@ const NumberOfRoundsModal: React.FC<NumberOfRoundsModalProps> = ({
           onClick={onClose}
         >
           <motion.div
-            variants={modalVariants}
             className="w-full max-w-md   dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-200 dark:border-gray-800"
             onClick={(e) => e.stopPropagation()}
           >
@@ -120,8 +119,8 @@ const NumberOfRoundsModal: React.FC<NumberOfRoundsModalProps> = ({
                         {num === 1
                           ? "1 lượt"
                           : num === 2
-                          ? "2 lượt (lượt đi & về)"
-                          : `${num} lượt`}
+                            ? "2 lượt (lượt đi & về)"
+                            : `${num} lượt`}
                       </div>
                       {numberOfRounds === num && (
                         <motion.div
