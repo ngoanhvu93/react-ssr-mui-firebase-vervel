@@ -9,7 +9,6 @@ import {
   type LocationData,
 } from "~/utils/weather-service";
 import {
-  WEATHER_ANIMATIONS,
   getWeatherClasses,
   getTimeOfDay,
   getWeatherTextColor,
@@ -23,13 +22,10 @@ import {
   snowflakeAnimation,
   lightningAnimation,
   fogAnimation,
-  pulseAnimation,
   generateRaindrops,
   generateSnowflakes,
   generateFogPatches,
 } from "~/utils/weather-animations";
-
-// Import Lucide icons
 import {
   Sun,
   Cloud,
@@ -40,20 +36,15 @@ import {
   CloudLightning,
   Wind,
   Droplets,
-  Thermometer,
   Eye,
   Umbrella,
   Gauge,
-  Plus,
-  MoreHorizontal,
   ArrowLeft,
   Search,
   MapPin,
   List,
-  ChevronDown,
   XCircle,
   Loader2,
-  RefreshCw,
   LocateFixed,
   Calendar,
 } from "lucide-react";
@@ -579,6 +570,7 @@ const AppleWeather: React.FC = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <button
+                title="Close"
                 className="p-2  /10 rounded-full text-white"
                 onClick={() => setShowSearch(false)}
               >
@@ -596,6 +588,7 @@ const AppleWeather: React.FC = () => {
                 />
                 {searchQuery && (
                   <button
+                    title="Clear"
                     className="absolute right-3 top-1/2 -translate-y-1/2 text-white/60"
                     onClick={() => setSearchQuery("")}
                   >
@@ -692,6 +685,7 @@ const AppleWeather: React.FC = () => {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <button
+            title="Search"
             className="p-2.5  /15 rounded-full backdrop-blur-md"
             onClick={() => setShowSearch(true)}
           >
@@ -699,6 +693,7 @@ const AppleWeather: React.FC = () => {
           </button>
           <div className="flex gap-2">
             <button
+              title="Current Location"
               className="p-2.5  /15 rounded-full backdrop-blur-md"
               onClick={resetToCurrentLocation}
             >
@@ -782,8 +777,8 @@ const AppleWeather: React.FC = () => {
               weather.humidity > 70
                 ? "High humidity"
                 : weather.humidity < 30
-                ? "Low humidity"
-                : "Normal"
+                  ? "Low humidity"
+                  : "Normal"
             }
           />
           <WeatherDetailsCard
@@ -804,8 +799,8 @@ const AppleWeather: React.FC = () => {
                 weather.uv_index > 5
                   ? "High exposure"
                   : weather.uv_index > 2
-                  ? "Moderate"
-                  : "Low"
+                    ? "Moderate"
+                    : "Low"
               }
             />
           )}
@@ -830,8 +825,8 @@ const AppleWeather: React.FC = () => {
                   weather.visibility < 1
                     ? "Poor visibility"
                     : weather.visibility < 5
-                    ? "Moderate"
-                    : "Good visibility"
+                      ? "Moderate"
+                      : "Good visibility"
                 }
               />
             )}
