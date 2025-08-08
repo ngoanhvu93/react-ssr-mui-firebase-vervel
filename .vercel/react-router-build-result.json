@@ -1,0 +1,603 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs_eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/donate": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/search": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/games": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/arcade": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/app-store": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/create-lotto-room": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/join-lotto-room": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/lotto-room": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/create-thirteen-card-room": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/join-thirteen-card-room": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/thirteen-card-room": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/thirteen-card-game-history": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/thirteen-card-game-detail": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/create-tournament": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/join-tournament": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/round-robin-tournament": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/count-down": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "coming-soon/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "about/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "contact/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "game-flappy-bird/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "weather/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "keyboard-tester/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/wedding-invitation": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "entertainment/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "flash-cards-vocablary/page": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "app/root.tsx",
+        "path": "",
+        "config": {}
+      },
+      "routes/home": {
+        "id": "routes/home",
+        "parentId": "root",
+        "file": "app/routes/home.tsx",
+        "index": true,
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/donate": {
+        "id": "routes/donate",
+        "parentId": "root",
+        "file": "app/routes/donate.tsx",
+        "path": "donate",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/search": {
+        "id": "routes/search",
+        "parentId": "root",
+        "file": "app/routes/search.tsx",
+        "path": "search",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/games": {
+        "id": "routes/games",
+        "parentId": "root",
+        "file": "app/routes/games.tsx",
+        "path": "games",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/arcade": {
+        "id": "routes/arcade",
+        "parentId": "root",
+        "file": "app/routes/arcade.tsx",
+        "path": "arcade",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/app-store": {
+        "id": "routes/app-store",
+        "parentId": "root",
+        "file": "app/routes/app-store.tsx",
+        "path": "app-store",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/create-lotto-room": {
+        "id": "routes/create-lotto-room",
+        "parentId": "root",
+        "file": "app/routes/create-lotto-room.tsx",
+        "path": "create-lotto-room",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/join-lotto-room": {
+        "id": "routes/join-lotto-room",
+        "parentId": "root",
+        "file": "app/routes/join-lotto-room.tsx",
+        "path": "join-lotto-room",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/lotto-room": {
+        "id": "routes/lotto-room",
+        "parentId": "root",
+        "file": "app/routes/lotto-room.tsx",
+        "path": "lotto-room/:id",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/create-thirteen-card-room": {
+        "id": "routes/create-thirteen-card-room",
+        "parentId": "root",
+        "file": "app/routes/create-thirteen-card-room.tsx",
+        "path": "create-thirteen-card-room",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/join-thirteen-card-room": {
+        "id": "routes/join-thirteen-card-room",
+        "parentId": "root",
+        "file": "app/routes/join-thirteen-card-room.tsx",
+        "path": "join-thirteen-card-room",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/thirteen-card-room": {
+        "id": "routes/thirteen-card-room",
+        "parentId": "root",
+        "file": "app/routes/thirteen-card-room.tsx",
+        "path": "thirteen-card-room/:id",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/thirteen-card-game-history": {
+        "id": "routes/thirteen-card-game-history",
+        "parentId": "root",
+        "file": "app/routes/thirteen-card-game-history.tsx",
+        "path": "thirteen-card-game-history/:id",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/thirteen-card-game-detail": {
+        "id": "routes/thirteen-card-game-detail",
+        "parentId": "root",
+        "file": "app/routes/thirteen-card-game-detail.tsx",
+        "path": "thirteen-card-game-detail/:id",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/create-tournament": {
+        "id": "routes/create-tournament",
+        "parentId": "root",
+        "file": "app/routes/create-tournament.tsx",
+        "path": "create-tournament",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/join-tournament": {
+        "id": "routes/join-tournament",
+        "parentId": "root",
+        "file": "app/routes/join-tournament.tsx",
+        "path": "join-tournament",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/round-robin-tournament": {
+        "id": "routes/round-robin-tournament",
+        "parentId": "root",
+        "file": "app/routes/round-robin-tournament.tsx",
+        "path": "round-robin-tournament/:id",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/count-down": {
+        "id": "routes/count-down",
+        "parentId": "root",
+        "file": "app/routes/count-down.tsx",
+        "path": "count-down",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "coming-soon/page": {
+        "id": "coming-soon/page",
+        "parentId": "root",
+        "file": "app/coming-soon/page.tsx",
+        "path": "coming-soon",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "about/page": {
+        "id": "about/page",
+        "parentId": "root",
+        "file": "app/about/page.tsx",
+        "path": "about",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "contact/page": {
+        "id": "contact/page",
+        "parentId": "root",
+        "file": "app/contact/page.tsx",
+        "path": "contact",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "game-flappy-bird/page": {
+        "id": "game-flappy-bird/page",
+        "parentId": "root",
+        "file": "app/game-flappy-bird/page.tsx",
+        "path": "flappy-bird",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "weather/page": {
+        "id": "weather/page",
+        "parentId": "root",
+        "file": "app/weather/page.tsx",
+        "path": "weather",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "keyboard-tester/page": {
+        "id": "keyboard-tester/page",
+        "parentId": "root",
+        "file": "app/keyboard-tester/page.tsx",
+        "path": "keyboard-tester",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/wedding-invitation": {
+        "id": "routes/wedding-invitation",
+        "parentId": "root",
+        "file": "app/routes/wedding-invitation.tsx",
+        "path": "thiep-cuoi/:slug",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "entertainment/page": {
+        "id": "entertainment/page",
+        "parentId": "root",
+        "file": "app/entertainment/page.tsx",
+        "path": "entertainment",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "flash-cards-vocablary/page": {
+        "id": "flash-cards-vocablary/page",
+        "parentId": "root",
+        "file": "app/flash-cards-vocablary/page.tsx",
+        "path": "flash-cards",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "/Users/anhvungo/code/react-ssr-mui-firebase-vervel/app",
+    "basename": "/",
+    "buildDirectory": "/Users/anhvungo/code/react-ssr-mui-firebase-vervel/build",
+    "future": {
+      "unstable_middleware": false,
+      "unstable_optimizeDeps": false,
+      "unstable_splitRouteModules": false,
+      "unstable_subResourceIntegrity": false,
+      "unstable_viteEnvironmentApi": false
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "routes/home": {
+        "id": "routes/home",
+        "parentId": "root",
+        "file": "routes/home.tsx",
+        "index": true
+      },
+      "routes/donate": {
+        "id": "routes/donate",
+        "parentId": "root",
+        "file": "routes/donate.tsx",
+        "path": "donate"
+      },
+      "routes/search": {
+        "id": "routes/search",
+        "parentId": "root",
+        "file": "routes/search.tsx",
+        "path": "search"
+      },
+      "routes/games": {
+        "id": "routes/games",
+        "parentId": "root",
+        "file": "routes/games.tsx",
+        "path": "games"
+      },
+      "routes/arcade": {
+        "id": "routes/arcade",
+        "parentId": "root",
+        "file": "routes/arcade.tsx",
+        "path": "arcade"
+      },
+      "routes/app-store": {
+        "id": "routes/app-store",
+        "parentId": "root",
+        "file": "routes/app-store.tsx",
+        "path": "app-store"
+      },
+      "routes/create-lotto-room": {
+        "id": "routes/create-lotto-room",
+        "parentId": "root",
+        "file": "routes/create-lotto-room.tsx",
+        "path": "create-lotto-room"
+      },
+      "routes/join-lotto-room": {
+        "id": "routes/join-lotto-room",
+        "parentId": "root",
+        "file": "routes/join-lotto-room.tsx",
+        "path": "join-lotto-room"
+      },
+      "routes/lotto-room": {
+        "id": "routes/lotto-room",
+        "parentId": "root",
+        "file": "routes/lotto-room.tsx",
+        "path": "lotto-room/:id"
+      },
+      "routes/create-thirteen-card-room": {
+        "id": "routes/create-thirteen-card-room",
+        "parentId": "root",
+        "file": "routes/create-thirteen-card-room.tsx",
+        "path": "create-thirteen-card-room"
+      },
+      "routes/join-thirteen-card-room": {
+        "id": "routes/join-thirteen-card-room",
+        "parentId": "root",
+        "file": "routes/join-thirteen-card-room.tsx",
+        "path": "join-thirteen-card-room"
+      },
+      "routes/thirteen-card-room": {
+        "id": "routes/thirteen-card-room",
+        "parentId": "root",
+        "file": "routes/thirteen-card-room.tsx",
+        "path": "thirteen-card-room/:id"
+      },
+      "routes/thirteen-card-game-history": {
+        "id": "routes/thirteen-card-game-history",
+        "parentId": "root",
+        "file": "routes/thirteen-card-game-history.tsx",
+        "path": "thirteen-card-game-history/:id"
+      },
+      "routes/thirteen-card-game-detail": {
+        "id": "routes/thirteen-card-game-detail",
+        "parentId": "root",
+        "file": "routes/thirteen-card-game-detail.tsx",
+        "path": "thirteen-card-game-detail/:id"
+      },
+      "routes/create-tournament": {
+        "id": "routes/create-tournament",
+        "parentId": "root",
+        "file": "routes/create-tournament.tsx",
+        "path": "create-tournament"
+      },
+      "routes/join-tournament": {
+        "id": "routes/join-tournament",
+        "parentId": "root",
+        "file": "routes/join-tournament.tsx",
+        "path": "join-tournament"
+      },
+      "routes/round-robin-tournament": {
+        "id": "routes/round-robin-tournament",
+        "parentId": "root",
+        "file": "routes/round-robin-tournament.tsx",
+        "path": "round-robin-tournament/:id"
+      },
+      "routes/count-down": {
+        "id": "routes/count-down",
+        "parentId": "root",
+        "file": "routes/count-down.tsx",
+        "path": "count-down"
+      },
+      "coming-soon/page": {
+        "id": "coming-soon/page",
+        "parentId": "root",
+        "file": "coming-soon/page.tsx",
+        "path": "coming-soon"
+      },
+      "about/page": {
+        "id": "about/page",
+        "parentId": "root",
+        "file": "about/page.tsx",
+        "path": "about"
+      },
+      "contact/page": {
+        "id": "contact/page",
+        "parentId": "root",
+        "file": "contact/page.tsx",
+        "path": "contact"
+      },
+      "game-flappy-bird/page": {
+        "id": "game-flappy-bird/page",
+        "parentId": "root",
+        "file": "game-flappy-bird/page.tsx",
+        "path": "flappy-bird"
+      },
+      "weather/page": {
+        "id": "weather/page",
+        "parentId": "root",
+        "file": "weather/page.tsx",
+        "path": "weather"
+      },
+      "keyboard-tester/page": {
+        "id": "keyboard-tester/page",
+        "parentId": "root",
+        "file": "keyboard-tester/page.tsx",
+        "path": "keyboard-tester"
+      },
+      "routes/wedding-invitation": {
+        "id": "routes/wedding-invitation",
+        "parentId": "root",
+        "file": "routes/wedding-invitation.tsx",
+        "path": "thiep-cuoi/:slug"
+      },
+      "entertainment/page": {
+        "id": "entertainment/page",
+        "parentId": "root",
+        "file": "entertainment/page.tsx",
+        "path": "entertainment"
+      },
+      "flash-cards-vocablary/page": {
+        "id": "flash-cards-vocablary/page",
+        "parentId": "root",
+        "file": "./flash-cards-vocablary/page.tsx",
+        "path": "flash-cards"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "lazy",
+      "manifestPath": "/__manifest"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true,
+    "unstable_routeConfig": [
+      {
+        "id": "root",
+        "path": "",
+        "file": "root.tsx",
+        "children": [
+          {
+            "file": "routes/home.tsx",
+            "index": true
+          },
+          {
+            "file": "routes/donate.tsx",
+            "path": "donate"
+          },
+          {
+            "file": "routes/search.tsx",
+            "path": "search"
+          },
+          {
+            "file": "routes/games.tsx",
+            "path": "games"
+          },
+          {
+            "file": "routes/arcade.tsx",
+            "path": "arcade"
+          },
+          {
+            "file": "routes/app-store.tsx",
+            "path": "app-store"
+          },
+          {
+            "file": "routes/create-lotto-room.tsx",
+            "path": "create-lotto-room"
+          },
+          {
+            "file": "routes/join-lotto-room.tsx",
+            "path": "join-lotto-room"
+          },
+          {
+            "file": "routes/lotto-room.tsx",
+            "path": "lotto-room/:id"
+          },
+          {
+            "file": "routes/create-thirteen-card-room.tsx",
+            "path": "create-thirteen-card-room"
+          },
+          {
+            "file": "routes/join-thirteen-card-room.tsx",
+            "path": "join-thirteen-card-room"
+          },
+          {
+            "file": "routes/thirteen-card-room.tsx",
+            "path": "thirteen-card-room/:id"
+          },
+          {
+            "file": "routes/thirteen-card-game-history.tsx",
+            "path": "thirteen-card-game-history/:id"
+          },
+          {
+            "file": "routes/thirteen-card-game-detail.tsx",
+            "path": "thirteen-card-game-detail/:id"
+          },
+          {
+            "file": "routes/create-tournament.tsx",
+            "path": "create-tournament"
+          },
+          {
+            "file": "routes/join-tournament.tsx",
+            "path": "join-tournament"
+          },
+          {
+            "file": "routes/round-robin-tournament.tsx",
+            "path": "round-robin-tournament/:id"
+          },
+          {
+            "file": "routes/count-down.tsx",
+            "path": "count-down"
+          },
+          {
+            "file": "coming-soon/page.tsx",
+            "path": "coming-soon"
+          },
+          {
+            "file": "about/page.tsx",
+            "path": "about"
+          },
+          {
+            "file": "contact/page.tsx",
+            "path": "contact"
+          },
+          {
+            "file": "game-flappy-bird/page.tsx",
+            "path": "flappy-bird"
+          },
+          {
+            "file": "weather/page.tsx",
+            "path": "weather"
+          },
+          {
+            "file": "keyboard-tester/page.tsx",
+            "path": "keyboard-tester"
+          },
+          {
+            "file": "routes/wedding-invitation.tsx",
+            "path": "thiep-cuoi/:slug"
+          },
+          {
+            "file": "entertainment/page.tsx",
+            "path": "entertainment"
+          },
+          {
+            "file": "./flash-cards-vocablary/page.tsx",
+            "path": "flash-cards"
+          }
+        ]
+      }
+    ]
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
