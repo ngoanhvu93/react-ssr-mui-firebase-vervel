@@ -1,0 +1,269 @@
+import { Link } from "react-router";
+import {
+  Favorite,
+  LocalCafe,
+  Email,
+  Facebook,
+  GitHub,
+  Star,
+  Chat,
+  Instagram,
+} from "@mui/icons-material";
+import { useState, useEffect } from "react";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Animation on scroll
+  useEffect(() => {
+    setIsVisible(true);
+
+    const handleScroll = () => {
+      const scrollPosition =
+        typeof window !== "undefined" && window.scrollY + window.innerHeight;
+      const footerPosition = document.getElementById("footer")?.offsetTop || 0;
+
+      if (scrollPosition && scrollPosition > footerPosition - 100) {
+        setIsVisible(true);
+      }
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+
+  return (
+    <footer
+      id="footer"
+      className={`-mx-4 -my-4 relative overflow-hidden bg-gradient-to-br from-indigo-800 via-purple-800 to-pink-700 text-white py-8 sm:py-12 mt-auto shadow-xl transition-all duration-700 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-300 via-green-300 to-blue-300"></div>
+      <div className="absolute -top-16 -right-16 w-32 h-32 rounded-full bg-pink-400 opacity-20 blur-xl"></div>
+      <div className="absolute -bottom-12 -left-12 w-28 h-28 rounded-full bg-blue-400 opacity-20 blur-xl"></div>
+      <div className="absolute top-1/4 left-1/3 w-20 h-20 rounded-full bg-purple-300 opacity-10 blur-lg"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+          {/* App info */}
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-bold mb-3 flex flex-wrap justify-center md:justify-start items-center gap-2">
+              <span className="text-yellow-300 tracking-wide">App Việt</span>
+              <Star
+                className="inline-block text-yellow-300 animate-pulse"
+                sx={{ fontSize: 20 }}
+              />
+            </h3>
+            <p className="mx-auto md:mx-0 leading-relaxed mb-4">
+              App Việt dành cho người Việt - Trải nghiệm công nghệ đặc sắc và
+              tiện ích cho cộng đồng
+            </p>
+
+            {/* Features list */}
+            <div className="mt-3">
+              <div className="flex justify-center md:justify-start flex-wrap gap-2">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-900/80 text-white backdrop-blur-sm shadow-sm hover:bg-indigo-800/80 transition-colors">
+                  Realtime
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-900/80 text-white backdrop-blur-sm shadow-sm hover:bg-purple-800/80 transition-colors">
+                  Dễ sử dụng
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-900/80 text-white backdrop-blur-sm shadow-sm hover:bg-pink-800/80 transition-colors">
+                  Miễn phí
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-900/80 text-white backdrop-blur-sm shadow-sm hover:bg-teal-800/80 transition-colors">
+                  Cập nhật liên tục
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="text-center md:text-left">
+            <h4 className="text-lg font-semibold mb-4 text-yellow-200">
+              Liên kết nhanh
+            </h4>
+            <ul className="space-y-2.5">
+              <li>
+                <Link
+                  to="/about"
+                  className="text-white/80 hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2 group"
+                >
+                  <span className="h-0.5 w-0 group-hover:w-3 bg-yellow-300 transition-all duration-300"></span>
+                  Giới thiệu
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/features"
+                  className="text-white/80 hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2 group"
+                >
+                  <span className="h-0.5 w-0 group-hover:w-3 bg-yellow-300 transition-all duration-300"></span>
+                  Tính năng
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-white/80 hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2 group"
+                >
+                  <span className="h-0.5 w-0 group-hover:w-3 bg-yellow-300 transition-all duration-300"></span>
+                  Liên hệ
+                </Link>
+              </li>
+              <li>
+                <div
+                  onClick={() =>
+                    typeof window !== "undefined" &&
+                    window.open(
+                      "momo://?action=transfer&receiver=0969872363",
+                      "_blank"
+                    )
+                  }
+                  className="text-white/80 cursor-pointer hover:text-white transition-colors flex items-center justify-center md:justify-start gap-2 group"
+                >
+                  <span className="h-0.5 w-0 group-hover:w-3 bg-yellow-300 transition-all duration-300"></span>
+                  Ủng hộ
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social links and donate button */}
+          <div className="flex flex-col items-center md:items-end">
+            <h4 className="text-lg font-semibold mb-4 text-yellow-200">
+              Kết nối với chúng tôi
+            </h4>
+            {/* Social links */}
+            <div className="flex space-x-4 mb-6">
+              <a
+                href="https://github.com/ngoanhvu93"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-10 h-10 flex items-center justify-center"
+                aria-label="Github"
+              >
+                <div className="absolute inset-0  /10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                <GitHub
+                  sx={{ fontSize: 22 }}
+                  className="text-white group-hover:text-yellow-300 transition-colors duration-300"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/vungocoder/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-10 h-10 flex items-center justify-center"
+                aria-label="Facebook"
+              >
+                <div className="absolute inset-0  /10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                <Facebook
+                  sx={{ fontSize: 22 }}
+                  className="text-white group-hover:text-blue-300 transition-colors duration-300"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-10 h-10 flex items-center justify-center"
+                aria-label="Instagram"
+              >
+                <div className="absolute inset-0  /10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                <Instagram
+                  sx={{ fontSize: 22 }}
+                  className="text-white group-hover:text-pink-300 transition-colors duration-300"
+                />
+              </a>
+              <a
+                href="mailto:ngoanhvu110293@gmail.com"
+                className="group relative w-10 h-10 flex items-center justify-center"
+                aria-label="Email"
+              >
+                <div className="absolute inset-0  /10 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+                <Email
+                  sx={{ fontSize: 22 }}
+                  className="text-white group-hover:text-green-300 transition-colors duration-300"
+                />
+              </a>
+            </div>
+
+            {/* Donate button */}
+            <div
+              onClick={() =>
+                typeof window !== "undefined" &&
+                window.open(
+                  "momo://?action=transfer&receiver=0969872363",
+                  "_blank"
+                )
+              }
+              className="group relative overflow-hidden flex items-center bg-gradient-to-r from-yellow-500 to-orange-500 px-6 py-3 rounded-full font-medium text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <span className="absolute top-0 left-0 w-full h-full   opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              <LocalCafe sx={{ fontSize: 18 }} className="mr-2" />
+              <span className="font-semibold">Ủng hộ dự án</span>
+              <Favorite sx={{ fontSize: 16 }} className="ml-2 text-red-500" />
+            </div>
+          </div>
+        </div>
+
+        {/* Contact us banner */}
+        <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-900/80 to-purple-900/80 p-6 backdrop-blur-sm mb-8">
+          <div className="absolute -top-8 -right-8 w-16 h-16 rounded-full bg-yellow-400 opacity-20 blur-xl"></div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <h4 className="text-lg font-semibold mb-2 text-white">
+                Bạn cần hỗ trợ?
+              </h4>
+              <p className="text-white/80 text-sm max-w-md">
+                Đội ngũ App Việt luôn sẵn sàng lắng nghe và giúp đỡ bạn với mọi
+                vấn đề.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center  /10 hover: /20 border border-white/20 px-5 py-2.5 rounded-full text-white transition-colors"
+            >
+              <Chat sx={{ fontSize: 18 }} className="mr-2" />
+              <span>Liên hệ ngay</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Footer bottom */}
+        <div className="border-t border-white/20 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-white/70 text-sm mb-1 sm:mb-0 text-center sm:text-left">
+              © {currentYear}{" "}
+              <span className="font-medium text-white">App Việt</span>. Đã đăng
+              ký bản quyền.
+            </p>
+            <p className="text-white/70 text-sm flex items-center">
+              Thiết kế với{" "}
+              <Favorite
+                sx={{ fontSize: 14 }}
+                className="mx-1 text-red-300 animate-pulse"
+              />{" "}
+              bởi{" "}
+              <span
+                onClick={() =>
+                  typeof window !== "undefined" &&
+                  window.open("https://vu93.vercel.app", "_blank")
+                }
+                className="font-semibold ml-1 text-yellow-300 hover:text-yellow-200 transition-colors"
+              >
+                Ngô Anh Vũ
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
